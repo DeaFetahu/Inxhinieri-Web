@@ -4,10 +4,10 @@ function funksioni(){
 
 
     if (emriUser==""){
-        alert("duhet te shenosh emer");
+        alert("Please write a valid username");
     }else if(password==""){
-        alert("duhet te shenosh password");
+        alert("Please write your password");
     }else{
-        alert("te dhenat jane ne rregull"); 
+        alert("Your input is correct "); 
     }
 }
