@@ -1,5 +1,5 @@
 #logo{
-    width:300px;
+    width:290px;
     aspect-ratio:1,2;
 }
 /*navigation bar*/
@@ -40,86 +40,7 @@ ul>li{
     padding-right: 10px;
 
 }
-/*log in forma*/
-#fieldset{
-    
-    border:5px solid rgb(151, 222, 151);
-    border-radius: 30px;
-    width :250px;
-    margin-left:550px;
-    margin-top:50px;
-    height:350px;
-    padding-top:50px;
-    padding-bottom: 40px;
-    padding-left:80px;
-    padding-right: 70px;
-    font-family:'Times New Roman', Times, serif;
-    font-size: 19px;
-    background-color:rgb(224, 243, 224);
-    opacity: 0.6;
-    text-align: left;
-}
-/*-------------------------------------------------------*/
 
-/*titulli tek about us*/
-h1{
-    font-size: 35px;
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: black;
-}
-/*----------------------------------------------------------------------------*/
-/* Sign in forma*/
-#fieldset2{
-     border:5px solid rgb(151, 222, 151);
-    border-radius: 30px;
-    width :250px;
-    margin-left:550px;
-    margin-top:10px;
-    height:400px;
-    padding-top:40px;
-    padding-bottom: 40px;
-    padding-left:80px;
-    padding-right: 70px;
-    font-family:'Times New Roman', Times, serif;
-    font-size: 19px;
-    background-color:rgb(224, 243, 224);
-    opacity: 0.6;
-    text-align: justify;
-}
-/*per tekstet ne log in dhe sign in*/
-#p1{
-    font-size: medium;
-}
-/*-------------------------------------------------------------*/
-/*contact us forma*/
-#fieldset3{
-    display: flex;
-    border:5px white;
-    width :800px;
-    margin-left:280px;
-    margin-bottom: 120px;
-    height:400px;
-    padding-top:40px;
-    padding-bottom: 40px;
-    padding-left:130px;
-    padding-right: 70px;
-    font-family:'Times New Roman', Times, serif;
-    font-size: 19px;
-    text-align: justify;
-}
-.column {
-    float: left;
-    width: 40%;
-    padding: 15px;
-    margin-left: 40px;
-  }
-
-#contactP{
-    font-size: 60px;
-    text-align: center;
-}
- /*------------------------------------------------------------*/
   /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
   @media screen and (max-width:600px) {
     .column {
@@ -153,6 +74,7 @@ h1{
     background: fixed;
     width: 100vw;
     height: 70vh;
+    
 }
 .container {
     position: relative;
@@ -168,4 +90,70 @@ h1{
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  .column {
+    float:left;
+    width: 5%;
+    padding:5%;    
+  }
+  
+  /* Style the images inside the grid */
+  .column img {
+    width:280px;
+    height: 180px;
+  }
+  .row{
+    display: flex;
+    justify-content: space-around;
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  
 /*------------------------------------------------------------*/
+.container1{
+    position: relative;
+    width: 50%;
+}
+  .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    margin-left: 300%;
+  }
+  
+  .container1:hover .image{
+    opacity: 0.3
+  }
+  
+  .container1:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+   
+    background-color: #04AA6D;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+
+  }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             

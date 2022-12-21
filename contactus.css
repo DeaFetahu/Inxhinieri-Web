@@ -1,0 +1,90 @@
+#logo{
+    width:300px;
+    aspect-ratio:1,2;
+}
+/*navigation bar*/
+.header1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 20px 0;
+    font-size: 13px;
+}
+/*vendosja e fotos ne background*/
+body{
+    background-image: url(foto1.png);
+    background-size:cover;
+    background-attachment:fixed;
+    background-position-x: center;
+    margin:0;
+    width: 100vw;
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+    color:darkgrey;
+    font-size: 18px;
+}
+a:hover{
+    opacity: 0.7;
+}
+
+ul{
+    display:flex;
+    align-items:center;
+    list-style: none;
+}
+
+ul>li{
+    padding-right: 10px;
+
+}
+
+#fieldset3{
+    display: flex;
+    border:5px white;
+    width :800px;
+    margin-left:280px;
+    margin-bottom: 120px;
+    height:400px;
+    padding-top:40px;
+    padding-bottom: 40px;
+    padding-left:130px;
+    padding-right: 70px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 19px;
+    text-align: justify;
+}
+.column {
+    float: left;
+    width: 40%;
+    padding: 15px;
+    margin-left: 40px;
+  }
+
+#contactP{
+    font-size: 60px;
+    text-align: center;
+}
+
+.footer .footer-content{
+    border: 1px;
+    height: 60px;
+}
+
+.footer .footer-bottom{
+    background: #b8bfc7;
+    color: black;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    /* position: fixed; */
+    bottom: 0px;
+    left: 0px;
+    padding-top: 20px;
+    text-decoration-color: whitesmoke;
+    margin-bottom: 0px;
+    opacity: 0.7;
+    
+}
