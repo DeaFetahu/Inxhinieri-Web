@@ -2,6 +2,7 @@
     width:300px;
     aspect-ratio:1,2;
 }
+/*navigation bar*/
 .header1{
     display: flex;
     align-items: center;
@@ -9,6 +10,16 @@
     height: 60px;
     padding: 20px 0;
     font-size: 13px;
+}
+/*vendosja e fotos ne background*/
+body{
+    background-image: url(foto1.png);
+    background-size:cover;
+    background-attachment:fixed;
+    background-position-x: center;
+    margin:0;
+    width: 100vw;
+    height: 100vh;
 }
 a{
     text-decoration: none;
@@ -24,11 +35,12 @@ ul{
     align-items:center;
     list-style: none;
 }
-
+/*me u qas tek lista ne navigation bar*/
 ul>li{
     padding-right: 10px;
 
 }
+/*log in forma*/
 #fieldset{
     
     border:5px solid rgb(151, 222, 151);
@@ -46,24 +58,18 @@ ul>li{
     background-color:rgb(224, 243, 224);
     opacity: 0.6;
     text-align: left;
-
 }
-body{
-    background-image: url(foto1.png);
-    background-size:cover;
-    background-attachment:fixed;
-    background-position-x: center;
-    margin:0;
-    width: 100vw;
-    height: 100vh;
-}
+/*-------------------------------------------------------*/
 
+/*titulli tek about us*/
 h1{
     font-size: 35px;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: black;
 }
+/*----------------------------------------------------------------------------*/
+/* Sign in forma*/
 #fieldset2{
      border:5px solid rgb(151, 222, 151);
     border-radius: 30px;
@@ -81,6 +87,12 @@ h1{
     opacity: 0.6;
     text-align: justify;
 }
+/*per tekstet ne log in dhe sign in*/
+#p1{
+    font-size: medium;
+}
+/*-------------------------------------------------------------*/
+/*contact us forma*/
 #fieldset3{
     display: flex;
     border:5px white;
@@ -102,20 +114,19 @@ h1{
     padding: 15px;
     margin-left: 40px;
   }
- 
+
+#contactP{
+    font-size: 60px;
+    text-align: center;
+}
+ /*------------------------------------------------------------*/
   /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
   @media screen and (max-width:600px) {
     .column {
       width: 100%;
     }
 }
-#p1{
-    font-size: medium;
-}
-#contactP{
-    font-size: 60px;
-    text-align: center;
-}
+
 
 .footer .footer-content{
     border: 1px;
@@ -137,3 +148,24 @@ h1{
     opacity: 0.7;
     
 }
+/*home page*/
+#fotoHome{
+    background: fixed;
+    width: 100vw;
+    height: 70vh;
+}
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .centered {
+    position: absolute;
+    font-size:60px;
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+/*------------------------------------------------------------*/
