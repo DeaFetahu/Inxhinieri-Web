@@ -1,5 +1,6 @@
+
 #logo{
-    width:300px;
+    width:290px;
     aspect-ratio:1,2;
 }
 /*navigation bar*/
@@ -35,12 +36,15 @@ ul{
     align-items:center;
     list-style: none;
 }
-
+/*me u qas tek lista ne navigation bar*/
 ul>li{
     padding-right: 10px;
-
 }
-
+@media screen and (max-width:600px) {
+    .column {
+      width: 100%;
+    }
+}
 #fieldset3{
     display: flex;
     border:5px white;

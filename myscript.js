@@ -11,3 +11,7 @@ function funksioni(){
         alert("Your input is correct "); 
     }
 }
+/*faza 1 css */
+
+
+/*-------------------------------------------------------*/
