@@ -1,179 +1,168 @@
 #logo{
-    width:290px;
-    aspect-ratio:1,2;
+  width:290px;
+  aspect-ratio:1,2;
 }
 /*navigation bar*/
 .header1{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 60px;
-    padding: 20px 0;
-    font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 20px 0;
+  font-size: 13px;
 }
 /*vendosja e fotos ne background*/
 /*body{
-    background-image: url(foto1.png);
-    background-size:cover;
-    background-attachment:fixed;
-    background-position-x: center;
-    margin:0;
-    width: 100vw;
-    height: 100vh;
+  background-image: url(foto1.png);
+  background-size:cover;
+  background-attachment:fixed;
+  background-position-x: center;
+  margin:0;
+  width: 100vw;
+  height: 100vh;
 }*/
 a{
-    text-decoration: none;
-    color:darkgrey;
-    font-size: 18px;
+  text-decoration: none;
+  color:darkgrey;
+  font-size: 18px;
 }
 a:hover{
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 ul{
-    display:flex;
-    align-items:center;
-    list-style: none;
+  display:flex;
+  align-items:center;
+  list-style: none;
 }
 /*me u qas tek lista ne navigation bar*/
 ul>li{
-    padding-right: 10px;
+  padding-right: 10px;
 
 }
 
 #fotoBackground{
-    background: fixed;
-    width: 100vw;
-    height: 60vh;
+  background: fixed;
+  width: 100vw;
+  height: 60vh;
 }
 .container {
-    position: relative;
-    text-align: center;
-    color: white;
-  }
-  .centered {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-40%, -60%);
-  }
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.centered {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-40%, -60%);
+}
 /*fotot e ikonave*/
 .column {
-    float:left;
-    width: 5%;
-    padding:5%;    
-  }
+  float:left;
+  width: 5%;
+  padding:5%;    
+}
+
+/* Style the images inside the grid */
+.column img {
+  width:95px;
+  height: 65px;
+}
+.row{
+  display: flex;
+  justify-content:baseline;
+  margin-left: 30%;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/*vendosja e fotove afer tekstit*/
+.container1 {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.container2 {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.container3 {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+/*our team*/
+.row1{
+  display: flex;
+  justify-content: space-around;
+}
+
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/*creates a shadow for the box*/
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+ /* Some left and right padding inside the container */
+ .container4 {
+  padding: 0 10px;
+}
+
+/* Clear floats */
+.container4::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
   
-  /* Style the images inside the grid */
-  .column img {
-    width:95px;
-    height: 65px;
-  }
-  .row{
-    display: flex;
-    justify-content:baseline;
-    margin-left: 30%;
-  }
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  /*vendosja e fotove afer tekstit*/
-  .container1 {
-    display: flex;
-    align-items: center;
-    justify-content: center
-  }
-  .container2 {
-    display: flex;
-    align-items: center;
-    justify-content: center
-  }
-  .container3 {
-    display: flex;
-    align-items: center;
-    justify-content: center
-  }
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+.button:hover {
+  background-color: #555;
+}
 
 
-  .column1 {
-    float: left;
-    width: 20%;
-    margin-bottom: 16px;
-    padding: 0 8px;
-  }
-  
-  /* Display the columns below each other instead of side by side on small screens */
-  @media screen and (max-width: 650px) {
-    .column1 {
-      width: 80%;
-      display: block;
 
-    }
-  }
-  
-  /* Add some shadows to create a card effect */
-  .card1 {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Some left and right padding inside the container */
-  .container4 {
-    padding: 0 16px;
-  }
-  
-  /* Clear floats */
-  .container4::after, .row::after {
-    content: "";
-    clear: both;
-    display: table;
-    
-  }
-  
-  .title {
-    color: grey;
-  }
-  
-  .button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  .button:hover {
-    background-color: #555;
-  }
- 
- 
-  /*----------------------------------------*/
+/*----------------------------------------*/
 .footer .footer-content{
-    border: 1px;
-    height: 60px;
+  border: 1px;
+  height: 60px;
 }
 
 .footer .footer-bottom{
-    background: #b8bfc7;
-    color: black;
-    height: 50px;
-    width: 100%;
-    text-align: center;
-    /* position: fixed; */
-    bottom: 0px;
-    left: 0px;
-    padding-top: 20px;
-    text-decoration-color: whitesmoke;
-    margin-bottom: 0px;
-    opacity: 0.7;
-    
-}
-
-
+  background: #b8bfc7;
+  color: black;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  /* position: fixed; */
+  bottom: 0px;
+  left: 0px;
+  padding-top: 20px;
+  text-decoration-color: whitesmoke;
+  margin-bottom: 0px;
+  opacity: 0.7;
   
+}
