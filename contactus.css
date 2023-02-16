@@ -19,8 +19,8 @@ body{
     background-attachment:fixed;
     background-position-x: center;
     margin:0;
-    width: 100vw;
-    height: 100vh;
+   /*width: 100vw;
+    height: 100vh;*/
 }
 a{
     text-decoration: none;

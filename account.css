@@ -1,3 +1,4 @@
+
 #logo{
     width:290px;
     aspect-ratio:1,2;
@@ -18,8 +19,8 @@ body{
     background-attachment:fixed;
     background-position-x: center;
     margin:0;
-    width: 100vw;
-    height: 100vh;
+   /* width: 100vw;
+    height: 100vh;*/
 }
 a{
     text-decoration: none;
@@ -38,7 +39,6 @@ ul{
 /*me u qas tek lista ne navigation bar*/
 ul>li{
     padding-right: 10px;
-
 }
 #fieldset{
     

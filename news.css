@@ -40,23 +40,23 @@ ul{
 ul>li{
     padding-right: 10px;
 }
-#fieldset2{
-    border:5px solid rgb(151, 222, 151);
-   border-radius: 30px;
-   width :250px;
-   margin-left:550px;
-   margin-top:10px;
-   height:400px;
-   padding-top:40px;
-   padding-bottom: 40px;
-   padding-left:80px;
-   padding-right: 70px;
-   font-family:'Times New Roman', Times, serif;
-   font-size: 19px;
-   background-color:rgb(224, 243, 224);
-   opacity: 0.6;
-   text-align: justify;
+
+#fieldsetQyetet{
+border: 5px lightcyan;
+padding-right: 23%;
+border-radius: 10px ;
+background-color:whitesmoke;
+
+
 }
+.divQytetet{
+    border-radius: 10%;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color:whitesmoke;
+
+}
+
 .footer .footer-content{
     border: 1px;
     height: 60px;

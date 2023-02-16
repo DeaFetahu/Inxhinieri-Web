@@ -1,44 +1,44 @@
+
 #logo{
-    width:290px;
-    aspect-ratio:1,2;
+  width:290px;
+  aspect-ratio:1,2;
 }
 /*navigation bar*/
 .header1{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 60px;
-    padding: 20px 0;
-    font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 20px 0;
+  font-size: 13px;
 }
 /*vendosja e fotos ne background*/
 body{
-    background-image: url(foto1.png);
-    background-size:cover;
-    background-attachment:fixed;
-    background-position-x: center;
-    margin:0;
-    width: 100vw;
-    height: 100vh;
+  background-image: url(foto1.png);
+  background-size:cover;
+  background-attachment:fixed;
+  background-position-x: center;
+  margin:0;
+ /*width: 100vw;
+  height: 100vh;*/
 }
 a{
-    text-decoration: none;
-    color:darkgrey;
-    font-size: 18px;
+  text-decoration: none;
+  color:darkgrey;
+  font-size: 18px;
 }
 a:hover{
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 ul{
-    display:flex;
-    align-items:center;
-    list-style: none;
+  display:flex;
+  align-items:center;
+  list-style: none;
 }
 /*me u qas tek lista ne navigation bar*/
 ul>li{
-    padding-right: 10px;
-
+  padding-right: 10px;
 }
 
   /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
