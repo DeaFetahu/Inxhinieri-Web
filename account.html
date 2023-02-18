@@ -3,36 +3,43 @@
     <head>
         <title>Document</title>
         <link rel="stylesheet" href="account.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body >
-
         <header class="header1">
-            <li>
-           <img id= "logo" src="logo2.png" />
-            </li>
-            <ul>
-                    <li><a href="faza1.html">Home</a></li>
-                    <li><a href="news.php">News</a></li>
-                    <li><a href="Aboutus.html">About us</a></li>
-                    <li><a href="contactus.html">Contact us</a></li>
-                    <li><a href="account.html">Account</a></li>
-            </ul>
+              <li>
+                  <img id= "logo" src="fotot/logo2.png" />
+              </li>
+              <ul>
+                <li><a href="faza1.html">Home</a></li>
+                <li><a href="news.php">News</a></li>
+                <li><a href="qytetet.php">Cities</a></li>
+                <li><a href="Aboutus.html">About us</a></li>
+                <li><a href="contactus.html">Contact us</a></li>
+                <li><a href="account.html">Account</a></li>
+              </ul>
+          </header>
         </header>
         <br>
-        <div class="fieldclass">
             <fieldset id="fieldset">
                 <h1 style="font-size:22px; text-align: left;">Log in </h1>
+                <form name="form1">
                 Username 
-                <br><input type="text" id="emri" style ="height : 30px; width : 250px ;"/><br><br>
+                <br><input type="email" id="email" name="text1" style ="height : 30px; width : 250px ;" pattern="\S+@\S+\.\S+" tittle="Your email should be of this format: ex.text@text.text"/>
+                <br><br>
                 Password
-                <br><input type="password" id="password" style ="height : 30px; width : 250px; "/><br><br>
+                <br><input type="password"  id="psw" style ="height : 30px; width : 250px;  " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="
+                Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                <br><br>
+                <input type="checkbox" id="terms&conditions"> <p2 style="font-size: 15px;">I agree to terms & conditions</p2> <br><br>
 
-                <button id="button" onclick="funksioni()" style ="height: 30px ; width : 250px ; border-radius: 20px; background-color:rgb(151, 222, 151);" >Log in</button>
+                <button id="button" onclick="validateEmail(document.form1.text1)"  
+                style ="height: 30px ; width : 250px ; border-radius: 20px; background-color:rgb(151, 222, 151);" >Log in</button>
                 <br>
                 <br>
                 <p1 id="p1">Don't have an account? <br> <a id="signIn" href="SignIn.html">Sign up</a></p1>
+            </form>
             </fieldset>
-        </div>
         <br>
         <br>
         <br>
@@ -43,6 +50,62 @@
                 &copy; KosovaNetwork.com | Designed by Students
             </div>
         </div>
-        <script src="myscript.js"></script>
     </body>
+    <script>
+        // When the user starts to type something inside the password field
+        myInput.onkeyup = function() {
+            //email validation
+            var email=/\S+@\S+\.\S+/;
+            if(myInput.value.match(email)){
+                mail.classList.remove("invalid");
+                mail.classList.remove("valid");
+            } else if(myInput.value.match("")){
+                mail.classList.remove("invalid");
+                mail.classList.remove("valid");
+            }else{
+                mail.classList.remove("invalid");
+                mail.classList.remove("valid");
+            }
+
+          // Validate lowercase letters
+          var lowerCaseLetters = /[a-z]/g;
+          if(myInput.value.match(lowerCaseLetters)) {
+            letter.classList.remove("invalid");
+            letter.classList.add("valid");
+          } else {
+            letter.classList.remove("valid");
+            letter.classList.add("invalid");
+        }
+        
+          // Validate capital letters
+          var upperCaseLetters = /[A-Z]/g;
+          if(myInput.value.match(upperCaseLetters)) {
+            capital.classList.remove("invalid");
+            capital.classList.add("valid");
+          } else {
+            capital.classList.remove("valid");
+            capital.classList.add("invalid");
+          }
+        
+          // Validate numbers
+          var numbers = /[0-9]/g;
+          if(myInput.value.match(numbers)) {
+            number.classList.remove("invalid");
+            number.classList.add("valid");
+          } else {
+            number.classList.remove("valid");
+            number.classList.add("invalid");
+          }
+        
+          // Validate length
+          if(myInput.value.length >= 8) {
+            length.classList.remove("invalid");
+            length.classList.add("valid");
+          } else {
+            length.classList.remove("valid");
+            length.classList.add("invalid");
+          }
+        }
+        </script>
 </html> 
+

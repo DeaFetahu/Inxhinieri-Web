@@ -40,11 +40,6 @@ ul{
 ul>li{
     padding-right: 10px;
 }
-@media screen and (max-width:600px) {
-    .column {
-      width: 100%;
-    }
-}
 #fieldset3{
     display: flex;
     border:5px white;

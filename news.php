@@ -3,21 +3,22 @@
     <head>
         <title>Document</title>
         <link rel="stylesheet" href="news.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body >
-
-        <header class="header1">
-            <li>
-           <img id= "logo" src="logo2.png" />
-            </li>
-            <ul>
-                    <li><a href="faza1.html">Home</a></li>
-                    <li><a href="news.php">News</a></li>
-                    <li><a href="Aboutus.html">About us</a></li>
-                    <li><a href="contactus.html">Contact us</a></li>
-                    <li><a href="account.html">Account</a></li>
-            </ul>
-        </header>
+    <header class="header1">
+              <li>
+                  <img id= "logo" src="fotot/logo2.png" />
+              </li>
+              <ul>
+                <li><a href="faza1.html">Home</a></li>
+                <li><a href="news.php">News</a></li>
+                <li><a href="qytetet.php">Cities</a></li>
+                <li><a href="Aboutus.html">About us</a></li>
+                <li><a href="contactus.html">Contact us</a></li>
+                <li><a href="account.html">Account</a></li>
+              </ul>
+          </header>
         <hr>
         <br>
         <fieldset id ="fieldsetQyetet">
@@ -30,7 +31,7 @@
         </form>
         <br><br>
         <div class="divQytetet">
-        <?php 
+        <?php error_reporting(0);
 
         $qytetet=array ("Gjilani"=>"Gjilan is the eighth largest city in Kosovo and seat of Gjilan Municipality 
         and Gjilan District. It is located in the southeastern part of Kosovo, the region of Anamorava. 
@@ -48,8 +49,8 @@
           Rugova on the eastern section of the Accursed Mountains along Peja's Lumbardh in the western part of Kosovo.","Prizreni"=>"Prizren 
          is the second most populous city and municipality of Kosovo and seat of the eponymous municipality and district.
           It is located on the banks of the Prizren River between the foothills of the Sharr Mountains in southern Kosovo. 
-          Prizren experiences an oceanic climate under the influence of the surrounding mountains.", "null"=>"" );
-        echo $qytetet [$_POST["qyteti"]];
+          Prizren experiences an oceanic climate under the influence of the surrounding mountains." );
+          echo $qytetet [$_POST["qyteti"]];
         ?>
         </div>
         </fieldset>

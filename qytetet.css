@@ -1,0 +1,144 @@
+#logo{
+    width:290px;
+    aspect-ratio:1,2;
+  }
+  /*navigation bar*/
+  .header1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 20px 0;
+    font-size: 13px;
+  }
+  /*vendosja e fotos ne background*/
+  body{
+    background-image: url(foto1.png);
+    background-size:cover;
+    background-attachment:fixed;
+    background-position-x: center;
+    margin:0;
+   /*width: 100vw;
+    height: 100vh;*/
+  }
+  a{
+    text-decoration: none;
+    color:darkgrey;
+    font-size: 18px;
+  }
+  a:hover{
+    opacity: 0.7;
+  }
+  
+  ul{
+    display:flex;
+    align-items:center;
+    list-style: none;
+  }
+  /*me u qas tek lista ne navigation bar*/
+  ul>li{
+    padding-right: 10px;
+  }
+
+  .background1{
+    width: 100%;
+    height: 70vh;
+    background-image: url(backgroundCities.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-top: 30px;
+  }
+  
+  .background1  h1{
+    color: lightgreen;
+    margin-top: 100px;
+    margin-left: 8%;
+    font-size: 98px;
+    font-style: italic;
+  }
+  
+  .background1  p{
+  
+    color: rgb(16, 34, 33);
+    font-variant: small-caps;
+    font-size: 25px;
+    margin-left: 8%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: bold;
+  }
+  
+  .Kosova{
+    max-width: 1400px;
+    margin: 0% auto;
+    padding: 2rem 1rem; 
+  }
+  
+  
+  .Qytetet{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px 20px;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+    margin-top: 80px;
+  
+  }
+  .items{
+    text-align: center;
+    padding: 3rem 2rem;
+    background:#fff;
+   
+    outline: .1rem solid rgb(171, 248, 171);
+    outline-offset: -1.5rem;
+    cursor: pointer;
+  }
+    .items:hover{
+    outline: .1rem solid rgb(171, 248, 171);
+    outline-offset: 0;
+    }
+  
+  .items img{
+    width: 70%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.2s ease;
+  
+  }
+ /* .items img:hover{
+    transform: scale(1.1);
+  }*/
+  .items h4{
+    padding: .5rem 0;
+    text-align: center;
+    font-size: 1.5rem;
+    color: seagreen;
+  }
+  .items button{
+    width: 20%;
+    font: bold;
+  }
+
+  .footer .footer-content{
+    border: 1px;
+    height: 60px;
+}
+
+.footer .footer-bottom{
+    background: #b8bfc7;
+    color: black;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    /* position: fixed; */
+    bottom: 0px;
+    left: 0px;
+    padding-top: 20px;
+    text-decoration-color: whitesmoke;
+    margin-bottom: 0px;
+    opacity: 0.7;
+    
+}
+  
+ 
+ 
