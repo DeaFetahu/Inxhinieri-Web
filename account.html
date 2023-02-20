@@ -24,22 +24,27 @@
             <fieldset id="fieldset">
                 <h1 style="font-size:22px; text-align: left;">Log in </h1>
                 <form name="form1">
-                Username 
-                <br><input type="email" id="email" name="text1" style ="height : 30px; width : 250px ;" pattern="\S+@\S+\.\S+" tittle="Your email should be of this format: ex.text@text.text"/>
+                Email 
+                <br><input type="email" id="email" name="text1" style ="height : 30px; width : 250px ;" pattern="\S+@\S+\.\S+" tittle="Your email should be of this format: ex.text@text.text"required>
                 <br><br>
                 Password
                 <br><input type="password"  id="psw" style ="height : 30px; width : 250px;  " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="
                 Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
                 <br><br>
-                <input type="checkbox" id="terms&conditions"> <p2 style="font-size: 15px;">I agree to terms & conditions</p2> <br><br>
-
-                <button id="button" onclick="validateEmail(document.form1.text1)"  
-                style ="height: 30px ; width : 250px ; border-radius: 20px; background-color:rgb(151, 222, 151);" >Log in</button>
+                <input type="checkbox" id="terms&conditions" tittle="Please agree to our terms and conditions !"required> <p2 style="font-size: 15px;">I agree to terms & conditions</p2> <br><br>
+                <input type="submit" value="Log in" style ="height: 30px ; width : 250px ; border-radius: 20px; background-color:rgb(151, 222, 151);"/>
                 <br>
                 <br>
                 <p1 id="p1">Don't have an account? <br> <a id="signIn" href="SignIn.html">Sign up</a></p1>
             </form>
             </fieldset>
+            <div id="message">
+                <h3>Password must contain the following:</h3>
+                <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                <p id="number" class="invalid">A <b>number</b></p>
+                <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+              </div>
         <br>
         <br>
         <br>
@@ -52,20 +57,23 @@
         </div>
     </body>
     <script>
+        var myInput = document.getElementById("psw");
+        var letter = document.getElementById("letter");
+        var capital = document.getElementById("capital");
+        var number = document.getElementById("number");
+        var length = document.getElementById("length");
+
+        myInput.onfocus = function() {
+        document.getElementById("message").style.display = "block";
+        }
+
+        myInput.onblur = function() {
+        document.getElementById("message").style.display = "none";
+        }
+
         // When the user starts to type something inside the password field
         myInput.onkeyup = function() {
             //email validation
-            var email=/\S+@\S+\.\S+/;
-            if(myInput.value.match(email)){
-                mail.classList.remove("invalid");
-                mail.classList.remove("valid");
-            } else if(myInput.value.match("")){
-                mail.classList.remove("invalid");
-                mail.classList.remove("valid");
-            }else{
-                mail.classList.remove("invalid");
-                mail.classList.remove("valid");
-            }
 
           // Validate lowercase letters
           var lowerCaseLetters = /[a-z]/g;
