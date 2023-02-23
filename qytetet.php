@@ -4,25 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kosova Network</title>
-    <link rel="stylesheet" href="qytetet.css">
+    <link rel="stylesheet" href="css/qytetet.css">
 </head>
 <body>
-<header class="header1">
-              <li>
-                  <img id= "logo" src="fotot/logo2.png" />
-              </li>
-              <ul>
-                <li><a href="faza1.html">Home</a></li>
-                <li><a href="news.php">News</a></li>
-                <li><a href="qytetet.php">Cities</a></li>
-                <li><a href="Aboutus.html">About us</a></li>
-                <li><a href="contactus.html">Contact us</a></li>
-                <li><a href="account.html">Account</a></li>
-              </ul>
-          </header>
+<?php include "header.html" ?>
 
 <fieldset id="teksti">
-<h1>Discover, <span class="underlined underline-clip">See</span><br>& Learn <span class="underlined underline-mask">new</span><br><span class="underlined underline-overflow">Cultures</span></h1>
+<h1>Discover, <span class="underlined underline-clip">See</span><br>& Learn <span class="underlined underline-mask">New</span><br><span class="underlined underline-overflow">Cultures</span></h1>
 </fieldset>
 
     <div class="Kosova">
@@ -65,17 +53,7 @@
         </div> 
     </div>
 </div>
-    <!--Footer-->
-    <footer>
-    <div class="footer">
-            <div class="footer-bottom">
-                +38349xxxxxx; info@kosovanetwork.com
-                <br>
-                &copy; KosovaNetwork.com | Designed by Students
-            </div>
-        </div>
-
-    </footer>
+<?php include "footer.html" ?>
     
 </body>
 </html>

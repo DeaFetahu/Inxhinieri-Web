@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>About Us</title>
+        <link rel="stylesheet" href="css/Aboutus.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+   <body>
+    <?php include "header.html" ?>
+        <main>
+        <div class="container">
+       <div class="centered"><h1 style=" font-size: 50px; font-family: Verdana, Geneva, Tahoma, sans-serif; color: gray;">About Kosova Network</h1></div>
+        <img id="fotoBackground" src="fotot/aboutUsBackground1.jpg" alt="" >
+        </div>
+        <br>
+        <div class="row">
+            <div class="column">
+                <img src="fotot/iconFood.png" alt="">
+                <h4 style="margin-left: 50%;">Food </h4>
+            </div>
+            <div class="column">
+                <img src="fotot/iconTravel.png" alt="">
+                <h4 style="margin-left: 40%;">Visit </h4>
+            </div>
+            <div class="column">
+                <img src="fotot/iconActivity.png" alt="">
+                <h4 style="margin-left: 30%;">Activities </h4>
+            </div>
+            <div class="column">
+                <img src="fotot/iconSearch.png" alt="">
+                <h4 style="margin-left: 50%;">Search </h4>
+            </div>
+        </div>
+     <hr>
+        <br>
+
+        <div class="container1">
+            <div class="image">
+             <img src="fotot/food2.jpg" alt="" style="height: 80%; width: 50%; margin-left: 30%;">
+            </div>
+            <div class="text">
+              <h1>With our help, you can find Kosova's most delicious places to eat traditional food </h1>
+            </div>
+          </div>
+       
+          <br>
+          <div class="container2">
+            <div class="text">
+                <h1 style="margin-left:45%;">Here you can find Kosova's top places to visit </h1>
+            </div>
+            <div class="image">
+            <img src="fotot/foto11.jpg" alt="" style="height: 80%; width: 50%;  margin-left: 40%;">
+            </div>
+          </div>
+       
+        <br>
+        <div class="container3">
+            <div class="image">
+             <img src="fotot/fotoo14.jpg" alt="" style="height: 80%; width: 50%; margin-left: 20%;">
+            </div>
+            <div class="text">
+              <h1 style="margin-right: 20%;">...and top most interesting activities to do with your friends and family</h1>
+            </div>
+          </div>
+         <hr>
+         <br>
+         <h1 style="text-align: center; color: gray;">-Our Team-</h1>
+         <br>
+          <div class="row1">
+            <div class="column1" style="margin-left: 180px; width: 25%;" >
+              <div class="card1">
+                <img src="fotot/Joni2.jpg" alt="Jane" style="width:50%; height:2%; margin-left:25%;">
+                <div class="container4">
+                  <h2>Jon Basha</h2>
+                  <p class="title">CEO &amp; Founder</p>
+                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                  <p>example@example.com</p>
+                  <p><button class="button">Contact</button></p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="column1" style="width: 25%;">
+              <div class="card1">
+                <img src="fotot/dea2.jpg" alt="Mike" style="width:50%; height:2%;margin-left:25%;">
+                <div class="container4">
+                  <h2>Dea Fetahu</h2>
+                  <p class="title">Art Director</p>
+                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                  <p>example@example.com</p>
+                  <p><button class="button">Contact</button></p>
+                </div>
+              </div>
+            </div>
+          </div>
+            </main>
+           <?php include "footer.html"?>
+    </body>
+   </div>
+</html> 
+
+
+
+
+
+
+ 

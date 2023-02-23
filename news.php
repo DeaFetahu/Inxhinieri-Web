@@ -1,24 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Document</title>
-        <link rel="stylesheet" href="news.css">
+        <title>News</title>
+        <link rel="stylesheet" href="css/news.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body >
-    <header class="header1">
-              <li>
-                  <img id= "logo" src="fotot/logo2.png" />
-              </li>
-              <ul>
-                <li><a href="faza1.html">Home</a></li>
-                <li><a href="news.php">News</a></li>
-                <li><a href="qytetet.php">Cities</a></li>
-                <li><a href="Aboutus.html">About us</a></li>
-                <li><a href="contactus.html">Contact us</a></li>
-                <li><a href="account.html">Account</a></li>
-              </ul>
-          </header>
+   <?php include "header.html"?>
         <hr>
         <br>
         <fieldset id ="fieldsetQyetet">
@@ -79,12 +67,6 @@
         </div>
         </fieldset>
         <br>
-        <div class="footer">
-            <div class="footer-bottom">
-                +38349xxxxxx; info@kosovanetwork.com
-                <br>
-                &copy; KosovaNetwork.com | Designed by Students
-            </div>
-        </div>
+        <?php include "footer.html"?>
     </body>
 </html> 
