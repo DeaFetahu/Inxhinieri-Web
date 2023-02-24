@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
    <body>
-    <?php include "header.html" ?>
+    <?php include "header.php" ?>
         <main>
         <div class="container">
        <div class="centered"><h1 style=" font-size: 50px; font-family: Verdana, Geneva, Tahoma, sans-serif; color: gray;">About Kosova Network</h1></div>

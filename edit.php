@@ -1,3 +1,33 @@
+<?php
+require_once('modeliUser.php');
+
+$dhenat=new useri();
+$myId=$_GET['id'];
+$records=$dhenat->lexoDhenatSipasId($myId);
+/*
+echo "<pre>";
+        var_dump($records);
+echo"<pre>";
+*/
+   if(isset($_POST['edit'])){
+      
+       if($myId==$dhenat->getId()){
+
+        $dhenat->setEmri($_POST['emri']);
+        $dhenat->setMbiemri($_POST['mbiemri']);
+        $dhenat->setEmail($_POST['email']);
+        $dhenat->setPassword($_POST['password']);
+
+        echo $dhenat->updateDhenat();
+
+        echo
+       " <script>
+            alert('Te dhenat jane perditesuar me sukses !');
+            document.location='display.php';
+        </script>";
+       }
+   }
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,6 +50,9 @@
                 <label>Password</label>
                 <input type="password" class="inp" name="password"
                      value ="<?php echo $records['password'];?> "/>
+                     <label>Roli</label>
+                <input type="text" class="inp" name="roli"
+                    value ="<?php echo $records['roli'];?> "/>
                      
                 <button name='edit'>Save</button>
             </form>

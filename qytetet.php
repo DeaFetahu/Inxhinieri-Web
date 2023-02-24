@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/qytetet.css">
 </head>
 <body>
-<?php include "header.html" ?>
+<?php include "header.php" ?>
 
 <fieldset id="teksti">
 <h1>Discover, <span class="underlined underline-clip">See</span><br>& Learn <span class="underlined underline-mask">New</span><br><span class="underlined underline-overflow">Cultures</span></h1>

@@ -1,3 +1,17 @@
+<?php 
+session_start();
+$hide="";
+if(!isset($_SESSION["email"])){
+  header("location:account.php");
+ } else{
+    if($_SESSION['roli']=="admin"){
+    $hide="";
+  }else{
+    $hide="hide";
+  }
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +20,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-    <?php include "header.html"?>
+    <?php include "header.php"?>
         <main class="mainHome">
            <div class="container">
             <img id="fotoHome" src="fotot/backgroundHome1.jpg" style="width:100%;">
@@ -177,10 +191,20 @@
               </div>
               </div>
               <div class="clearfix2"></div>
-              
-  
       <br>
       <br>
       <?php include "footer.html"?>
+      <?php
+      if(isset($_SESSION['email'])) {
+        echo "<script>
+        let accountLink = document.getElementById('accountLink');
+        accountLink.href = 'logout.php';
+        accountLink.innerText = 'Logout';
+        </script>";
+      }
+       ?>
     </body>
 </html> 
+<?php
+}
+?>

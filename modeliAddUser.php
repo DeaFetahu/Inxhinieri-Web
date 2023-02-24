@@ -87,7 +87,7 @@ class useri extends dbConnect{
 
         echo "<script>
                 alert('te dhenat jane regjistruar me sukses');
-                document.location='account.php';
+                document.location='display.php';
          </script>";
         
     }
