@@ -1,8 +1,8 @@
 <?php 
-require_once('modeliHome.php');
+require_once('modeliQytetet.php');
 
-$dhenat=new home();
-$qytetet=$dhenat->lexoDhenatQytetet();
+$dhenat=new qytetet();
+$qytetet=$dhenat->lexoDhenatCities();
 ?>
 <!DOCTYPE html>
 <html lang="en">

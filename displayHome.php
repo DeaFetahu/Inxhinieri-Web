@@ -1,7 +1,7 @@
 <?php
-require_once('modeliHome.php');
+require_once('modeliStay.php');
 
-$dhenat=new home();
+$dhenat=new stay();
 $stay=$dhenat->lexoDhenatStay();
 $eat=$dhenat->lexoDhenatEat();
 $do=$dhenat->lexoDhenatDo();
@@ -51,7 +51,36 @@ $do=$dhenat->lexoDhenatDo();
   padding-left: 12vw;
   z-index: -1;
 }
-   
+#r{
+    align-items: center;
+  background-color: rgb(169, 224, 169);
+  border: 1px solid #DFDFDF;
+  border-radius: 16px;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  justify-content: center;
+  line-height: 28px;
+  max-width: 20%;
+  padding: 14px 22px;
+  text-decoration: none;
+  transition: all .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  margin: 10px 240px;
+}
+
+
+#r:hover{
+    background-color: rgb(190, 232, 190);
+  border-color: rgb(190, 232, 190);;
+}
+
      </style>
    </head>
 <body>
@@ -71,6 +100,12 @@ $do=$dhenat->lexoDhenatDo();
           <a href="displayHome.php">
             <i class='bx bx-box' ></i>
             <span class="links_name">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="displaySlide.php">
+            <i class='bx bx-box' ></i>
+            <span class="links_name">News</span>
           </a>
         </li>
         <li>
@@ -111,6 +146,8 @@ $do=$dhenat->lexoDhenatDo();
       <h1>Stay</h1>
       <br>
       <table class="styled-table">
+                <a href="createHome.php"><Button id='r'>Add more boxes</Button></a>
+                <br>
             <thread>
                     <tr>
                         <th>Emri</th>
@@ -129,6 +166,7 @@ $do=$dhenat->lexoDhenatDo();
                         <td><?php echo $value['foto']?></td>
                         <td><?php echo $value['url']?></td>
                         <td id='de'><a href="deleteHome.php?id=<?php echo $value['id']?>"><button id="d">DELETE</button></a>
+                        <a  href="editHome.php?id=<?php echo $value['id']?>"><button id='e'>EDIT</button></td></a>
                     </tr>
                   <?php
                   }
@@ -139,6 +177,8 @@ $do=$dhenat->lexoDhenatDo();
             <h1>Eat</h1>
             <br>
             <table class="styled-table">
+            <a href="createEat.php"><Button id='r'>Add more boxes</Button></a>
+                <br>
             <thread>
                     <tr>
                         <th>Emri</th>
@@ -156,7 +196,9 @@ $do=$dhenat->lexoDhenatDo();
                         <td><?php echo $value['emri']?></td>
                         <td><?php echo $value['foto']?></td>
                         <td><?php echo $value['url']?></td>
-                        <td id='de'><a href="deleteHome.php?id=<?php echo $value['id']?>"><button id="d">DELETE</button></a>
+                        <td id='de'><a href="deleteEat.php?id=<?php echo $value['id']?>"><button id="d">DELETE</button></a>
+                        <a  href="editEat.php?id=<?php echo $value['id']?>"><button id='e'>EDIT</button></td></a>
+
                     </tr>
                   <?php
                   }
@@ -167,6 +209,8 @@ $do=$dhenat->lexoDhenatDo();
             <h1>Do</h1>
             <br>
             <table class="styled-table">
+            <a href="createDo.php"><Button id='r'>Add more boxes</Button></a>
+            <br>
             <thread>
                     <tr>
                         <th>Emri</th>
@@ -184,7 +228,8 @@ $do=$dhenat->lexoDhenatDo();
                         <td><?php echo $value['emri']?></td>
                         <td><?php echo $value['foto']?></td>
                         <td><?php echo $value['url']?></td>
-                        <td id='de'><a href="deleteHome.php?id=<?php echo $value['id']?>"><button id="d">DELETE</button></a>
+                        <td id='de'><a href="deleteDo.php?id=<?php echo $value['id']?>"><button id="d">DELETE</button></a>
+                        <a  href="editDo.php?id=<?php echo $value['id']?>"><button id='e'>EDIT</button></td></a>
                     </tr>
                   <?php
                   }

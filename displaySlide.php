@@ -1,8 +1,8 @@
 <?php
-require_once('modeliUser.php');
+require_once('modeliSlideshow.php');
 
-$dhenat=new useri();
-$allData=$dhenat->lexoDhenat();
+$dhenat=new slideshow();
+$allData=$dhenat->lexoDhenatS();
 
 ?>
    <!DOCTYPE html>
@@ -45,8 +45,9 @@ $allData=$dhenat->lexoDhenat();
 
 #a1 {
   padding-top: 100px;
-  padding-left: 18vw;
+  padding-left: 7vw;
   z-index: -1;
+  margin-right:50px;
 }
 /*Butoni */
 .button-46 {
@@ -70,7 +71,7 @@ $allData=$dhenat->lexoDhenat();
   -webkit-user-select: none;
   touch-action: manipulation;
   width: 100%;
-  margin: 10px 240px;
+  margin: 10px 370px;
 }
 
 .button-46:active,
@@ -146,15 +147,13 @@ $allData=$dhenat->lexoDhenat();
     </nav>
 
     <div id="a1">
-      <a id="butoni " href="addUser.php"><button class="button-46" role="button">Add User</button></a> <br><br>
+      <a id="butoni " href="createSlide.php"><button class="button-46" role="button">Add slides</button></a> <br><br>
 <table class="styled-table">
 <thread>
         <tr>
-            <th>Emri</th>
-            <th>Mbiemri</th>
-            <th>Email</th>
-            <th>Password</th>
-            <th>Role</th>
+            <th>Foto</th>
+            <th>Text1</th>
+            <th>Text2</th>
             <th>Action</th>
         </tr>
         </thread>
@@ -164,13 +163,11 @@ $allData=$dhenat->lexoDhenat();
           foreach($allData as $key=> $value){
 
           ?>
-            <td><?php echo $value['emri']?></td>
-            <td><?php echo $value['mbiemri']?></td>
-            <td><?php echo $value['email']?></td>
-            <td><?php echo $value['password']?></td>
-            <td><?php echo $value['roli']?></td>
-            <td id='de'><a href="delete.php?id=<?php echo $value['id']?>"><button id="d">DELETE</button></a>
-               <a href="edit.php?id=<?php echo $value['id']?>"><button id='e'>EDIT</button></td></a>
+            <td><?php echo $value['foto']?></td>
+            <td><?php echo $value['teksti1']?></td>
+            <td><?php echo $value['teksti2']?></td>
+            <td id='de'><a href="deleteSlide.php?id=<?php echo $value['id']?>"><button id="d">DELETE</button></a>
+               <a href="editS.php?id=<?php echo $value['id']?>"><button id='e'>EDIT</button></td></a>
         </tr>
       <?php
       }

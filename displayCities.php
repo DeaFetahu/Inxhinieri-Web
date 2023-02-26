@@ -1,8 +1,8 @@
 <?php
-require_once('modeliHome.php');
+require_once('modeliQytetet.php');
 
-$dhenat=new home();
-$stay=$dhenat->lexoDhenatQytetet();
+$dhenat=new qytetet();
+$qytetet=$dhenat->lexoDhenatCities();
 
 
 ?>
@@ -73,6 +73,12 @@ $stay=$dhenat->lexoDhenatQytetet();
           </a>
         </li>
         <li>
+          <a href="displaySlide.php">
+            <i class='bx bx-box' ></i>
+            <span class="links_name">News</span>
+          </a>
+        </li>
+        <li>
           <a href="displayCities.php">
             <i class='bx bx-list-ul' ></i>
             <span class="links_name">Cities</span>
@@ -118,12 +124,13 @@ $stay=$dhenat->lexoDhenatQytetet();
                     <tbody>
                     <tr>
                       <?php
-                      foreach($stay as $key=> $value){
+                      foreach($qytetet as $key=> $value){
         
                       ?>
                         <td><?php echo $value['emri']?></td>
                         <td><?php echo $value['foto']?></td>
                         <td id='de'><a href="deleteCities.php?id=<?php echo $value['id']?>"><button id="d">DELETE</button></a>
+                        <a  href="editCities.php?id=<?php echo $value['id']?>"><button id='e'>EDIT</button></td></a>
                     </tr>
                   <?php
                   }

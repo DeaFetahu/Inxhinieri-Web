@@ -1,11 +1,33 @@
 <?php
-require_once('modeliUser.php');
+require_once('modeliSlideshow.php');
 
-$dhenat=new useri();
-$allData=$dhenat->lexoDhenat();
+$dhenat=new slideshow();
+$myId=$_GET['id'];
+$records=$dhenat->lexoDhenatSipasIDsS($myId);
+/*
+echo "<pre>";
+        var_dump($records);
+echo"<pre>";
+*/
+   if(isset($_POST['edit'])){
+      
+       if($myId==$dhenat->getId()){
 
+        $dhenat->setFoto($_POST['foto']);
+        $dhenat->setTeksti1($_POST['teksti1']);
+        $dhenat->setTeksti2($_POST['teksti2']);
+
+        echo $dhenat->updateDhenatS();
+
+        echo
+       " <script>
+            alert('Te dhenat jane perditesuar me sukses !');
+            document.location='displaySlide.php';
+        </script>";
+       }
+   }
 ?>
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
@@ -13,44 +35,50 @@ $allData=$dhenat->lexoDhenat();
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <style>
-          
-    .styled-table {
-    border-collapse: collapse;
-    font-size: 0.9em;
-    font-family: sans-serif;
-    min-width: 400px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-}
-.styled-table thead tr {
-    background-color: #009879;
-    color: #ffffff;
-    text-align: left;.
-}
-.styled-table th,
-.styled-table td {
-    padding: 12px 15px;
-}
+  
 
-.styled-table tbody tr {
-    border-bottom: 1px solid #dddddd;
-}
+        .container{
+            max-width:1200px;
+            padding:2rem;
+            margin:0 auto;
+            
+        }
+      
 
-.styled-table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
-}
+        .admin-product form{
+            max-width: 50rem;
+            margin:0 auto;
+            padding:2rem;
+            border-radius: .5rem;
+            font-size:28px;
+            color:black;
+            font-family:'Poppins', sans-serif;
+            
+        }
 
-.styled-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
-}
+        .admin-product form h3{
+           
+            color:lightgreen;
+            text-align:center;
+            font-family:'Poppins', sans-serif;
+            margin-bottom: 1rem;
+            font-size:2.5rem;
+        }
 
-#a1 {
-  padding-top: 100px;
-  padding-left: 18vw;
-  z-index: -1;
-}
-/*Butoni */
-.button-46 {
-  align-items: center;
+        .admin-product form .box{
+            width:100%;
+            border-radius: .5rem;
+            border-color:green;
+            padding:1.2rem ,1.5rem;
+            font-size:1.7rem;
+            margin:1rem 0;
+            background:beige;
+        }
+
+
+
+   input[type="submit"] {
+    align-items: center;
   background-color: rgb(169, 224, 169);
   border: 1px solid #DFDFDF;
   border-radius: 16px;
@@ -73,16 +101,11 @@ $allData=$dhenat->lexoDhenat();
   margin: 10px 240px;
 }
 
-.button-46:active,
-.button-46:hover {
-  outline: 0;
-}
 
-.button-46:hover {
-  background-color: rgb(190, 232, 190);
+input[type="submit"]:hover{
+    background-color: rgb(190, 232, 190);
   border-color: rgb(190, 232, 190);;
 }
-
    
      </style>
    </head>
@@ -103,12 +126,6 @@ $allData=$dhenat->lexoDhenat();
           <a href="displayHome.php">
             <i class='bx bx-box' ></i>
             <span class="links_name">Home</span>
-          </a>
-        </li>
-        <li>
-          <a href="displaySlide.php">
-            <i class='bx bx-box' ></i>
-            <span class="links_name">News</span>
           </a>
         </li>
         <li>
@@ -145,41 +162,29 @@ $allData=$dhenat->lexoDhenat();
       </div>
     </nav>
 
-    <div id="a1">
-      <a id="butoni " href="addUser.php"><button class="button-46" role="button">Add User</button></a> <br><br>
-<table class="styled-table">
-<thread>
-        <tr>
-            <th>Emri</th>
-            <th>Mbiemri</th>
-            <th>Email</th>
-            <th>Password</th>
-            <th>Role</th>
-            <th>Action</th>
-        </tr>
-        </thread>
-        <tbody>
-        <tr>
-          <?php
-          foreach($allData as $key=> $value){
+    <div class="container">
+    <div class="admin-product">
+    
+    <form action method="POST">
+        <br>
+    <h3>Edit!</h3>
+        Photo:
+        <input type="text" name="foto"  class="box" value="<?php echo $records['foto'];?>">
+        <br>
+        Text1:
+        <input type="text" name="teksti1" class="box" value="<?php echo $records['teksti1'];?>">
+        <br>
+        Text2:
+        <input type="text" name="teksti2" class="box" value="<?php echo $records['teksti2'];?>">
+        <br>
+        <input type="submit" name="edit" value="Save" >
+    </form>
 
-          ?>
-            <td><?php echo $value['emri']?></td>
-            <td><?php echo $value['mbiemri']?></td>
-            <td><?php echo $value['email']?></td>
-            <td><?php echo $value['password']?></td>
-            <td><?php echo $value['roli']?></td>
-            <td id='de'><a href="delete.php?id=<?php echo $value['id']?>"><button id="d">DELETE</button></a>
-               <a href="edit.php?id=<?php echo $value['id']?>"><button id='e'>EDIT</button></td></a>
-        </tr>
-      <?php
-      }
-      ?>
-      </section>
-      </tbody>
-</table>
 </div>
+</div>
+
   </section>
     </body>
     </html>
 
+ 

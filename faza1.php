@@ -10,10 +10,9 @@ if(!isset($_SESSION["email"])){
     $hide="hide";
   }
 
-require_once('modeliHome.php');
+require_once('modeliStay.php');
 
-$dhenat=new home();
-$home=$dhenat->lexoDhenat2();
+$dhenat=new stay();
 $stay=$dhenat->lexoDhenatStay();
 $eat=$dhenat->lexoDhenatEat();
 $do=$dhenat->lexoDhenatDo();
@@ -100,7 +99,7 @@ $do=$dhenat->lexoDhenatDo();
                         <div class="responsive">
                           <div class="gallery">
                             <a target="_blank" href="<?php echo $value['url'] ?>">
-                              <img src="<?php echo $value['foto'] ?>" alt="<?php echo $value['emri'] ?>" width="600" height="400">
+                              <img src="<?php echo $value['foto'] ?>" alt="" width="600" height="400">
                             </a>
                             <div class="desc"><?php echo $value['emri'] ?></div>
                           </div>

@@ -1,14 +1,14 @@
 <?php
-require_once('modeliStay.php');
+require_once('modeliSlideshow.php');
 
-$dhena=new qytetet();
+$dhena=new slideshow();
 
 if(isset($_GET['id'])){
 
     $dhena->setId($_GET['id']);
     $myId=$dhena->getId();
 
-    $dhena->deleteDhenat2($myId);
+    $dhena->deleteDhenatS($myId);
 }
 
 ?>

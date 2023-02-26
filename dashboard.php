@@ -47,6 +47,12 @@ $dashboard1=$dhenat->lexoDhenat2();
           </a>
         </li>
         <li>
+          <a href="displaySlide.php">
+            <i class='bx bx-box' ></i>
+            <span class="links_name">News</span>
+          </a>
+        </li>
+        <li>
           <a href="displayCities.php">
             <i class='bx bx-list-ul' ></i>
             <span class="links_name">Cities</span>
