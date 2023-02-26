@@ -1,8 +1,10 @@
 <?php
-require_once('modelicontactus.php');
+require_once('modeliHome.php');
 
-$dhenat=new contactus();
-$allData=$dhenat->lexoDhenat2();
+$dhenat=new home();
+$stay=$dhenat->lexoDhenatStay();
+$eat=$dhenat->lexoDhenatEat();
+$do=$dhenat->lexoDhenatDo();
 
 ?>
 
@@ -46,7 +48,7 @@ $allData=$dhenat->lexoDhenat2();
 
 #a1 {
   padding-top: 100px;
-  padding-left: 22vw;
+  padding-left: 12vw;
   z-index: -1;
 }
    
@@ -106,26 +108,83 @@ $allData=$dhenat->lexoDhenat2();
     </nav>
 
     <div id="a1">
-      
+      <h1>Stay</h1>
+      <br>
       <table class="styled-table">
             <thread>
                     <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Message</th>
+                        <th>Emri</th>
+                        <th>Photo</th>
+                        <th>URL</th>
                         <th>Action</th>
                     </tr>
                     </thread>
                     <tbody>
                     <tr>
                       <?php
-                      foreach($allData as $key=> $value){
+                      foreach($stay as $key=> $value){
         
                       ?>
                         <td><?php echo $value['emri']?></td>
-                        <td><?php echo $value['email']?></td>
-                        <td><?php echo $value['message']?></td>
-                        <td id='de'><a href="deleteContactUs.php ?id=<?php echo $value['id']?>"><button id="d">DELETE</button></a>
+                        <td><?php echo $value['foto']?></td>
+                        <td><?php echo $value['url']?></td>
+                        <td id='de'><a href="deleteHome.php?id=<?php echo $value['id']?>"><button id="d">DELETE</button></a>
+                    </tr>
+                  <?php
+                  }
+                  ?>
+               </tbody>
+            </table>
+            <br><br>
+            <h1>Eat</h1>
+            <br>
+            <table class="styled-table">
+            <thread>
+                    <tr>
+                        <th>Emri</th>
+                        <th>Photo</th>
+                        <th>URL</th>
+                        <th>Action</th>
+                    </tr>
+                    </thread>
+                    <tbody>
+                    <tr>
+                      <?php
+                      foreach($eat as $key=> $value){
+        
+                      ?>
+                        <td><?php echo $value['emri']?></td>
+                        <td><?php echo $value['foto']?></td>
+                        <td><?php echo $value['url']?></td>
+                        <td id='de'><a href="deleteHome.php?id=<?php echo $value['id']?>"><button id="d">DELETE</button></a>
+                    </tr>
+                  <?php
+                  }
+                  ?>
+               </tbody>
+            </table>
+            <br><br>
+            <h1>Do</h1>
+            <br>
+            <table class="styled-table">
+            <thread>
+                    <tr>
+                        <th>Emri</th>
+                        <th>Photo</th>
+                        <th>URL</th>
+                        <th>Action</th>
+                    </tr>
+                    </thread>
+                    <tbody>
+                    <tr>
+                      <?php
+                      foreach($do as $key=> $value){
+        
+                      ?>
+                        <td><?php echo $value['emri']?></td>
+                        <td><?php echo $value['foto']?></td>
+                        <td><?php echo $value['url']?></td>
+                        <td id='de'><a href="deleteHome.php?id=<?php echo $value['id']?>"><button id="d">DELETE</button></a>
                     </tr>
                   <?php
                   }

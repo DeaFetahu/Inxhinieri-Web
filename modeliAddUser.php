@@ -1,7 +1,7 @@
 <?php 
 require_once('DB_Connection.php');
 
-class useri extends dbConnect{
+class modeluseri extends dbConnect{
     private $id;
     private $emri;
     private $mbiemri;

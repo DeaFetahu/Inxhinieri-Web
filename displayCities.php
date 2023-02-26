@@ -1,11 +1,13 @@
 <?php
-require_once('modeliUser.php');
+require_once('modeliHome.php');
 
-$dhenat=new useri();
-$allData=$dhenat->lexoDhenat();
+$dhenat=new home();
+$stay=$dhenat->lexoDhenatQytetet();
+
 
 ?>
-   <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
@@ -45,44 +47,9 @@ $allData=$dhenat->lexoDhenat();
 
 #a1 {
   padding-top: 100px;
-  padding-left: 18vw;
+  padding-left: 22vw;
   z-index: -1;
 }
-/*Butoni */
-.button-46 {
-  align-items: center;
-  background-color: rgb(169, 224, 169);
-  border: 1px solid #DFDFDF;
-  border-radius: 16px;
-  box-sizing: border-box;
-  color: #000000;
-  cursor: pointer;
-  display: flex;
-  font-family: Inter, sans-serif;
-  font-size: 18px;
-  justify-content: center;
-  line-height: 28px;
-  max-width: 20%;
-  padding: 14px 22px;
-  text-decoration: none;
-  transition: all .2s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: 100%;
-  margin: 10px 240px;
-}
-
-.button-46:active,
-.button-46:hover {
-  outline: 0;
-}
-
-.button-46:hover {
-  background-color: rgb(190, 232, 190);
-  border-color: rgb(190, 232, 190);;
-}
-
    
      </style>
    </head>
@@ -140,40 +107,32 @@ $allData=$dhenat->lexoDhenat();
     </nav>
 
     <div id="a1">
-      <a id="butoni " href="addUser.php"><button class="button-46" role="button">Add User</button></a> <br><br>
-<table class="styled-table">
-<thread>
-        <tr>
-            <th>Emri</th>
-            <th>Mbiemri</th>
-            <th>Email</th>
-            <th>Password</th>
-            <th>Role</th>
-            <th>Action</th>
-        </tr>
-        </thread>
-        <tbody>
-        <tr>
-          <?php
-          foreach($allData as $key=> $value){
-
-          ?>
-            <td><?php echo $value['emri']?></td>
-            <td><?php echo $value['mbiemri']?></td>
-            <td><?php echo $value['email']?></td>
-            <td><?php echo $value['password']?></td>
-            <td><?php echo $value['roli']?></td>
-            <td id='de'><a href="delete.php?id=<?php echo $value['id']?>"><button id="d">DELETE</button></a>
-               <a href="edit.php?id=<?php echo $value['id']?>"><button id='e'>EDIT</button></td></a>
-        </tr>
-      <?php
-      }
-      ?>
-      </section>
-      </tbody>
-</table>
+      <table class="styled-table">
+            <thread>
+                    <tr>
+                        <th>Emri</th>
+                        <th>Photo</th>
+                        <th>Action</th>
+                    </tr>
+                    </thread>
+                    <tbody>
+                    <tr>
+                      <?php
+                      foreach($stay as $key=> $value){
+        
+                      ?>
+                        <td><?php echo $value['emri']?></td>
+                        <td><?php echo $value['foto']?></td>
+                        <td id='de'><a href="deleteCities.php?id=<?php echo $value['id']?>"><button id="d">DELETE</button></a>
+                    </tr>
+                  <?php
+                  }
+                  ?>
+               </tbody>
+            </table>
+          
 </div>
   </section>
     </body>
     </html>
-
+    

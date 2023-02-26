@@ -8,6 +8,12 @@ if(!isset($_SESSION['email'])){
         header("location:faza1.php");
     }else{
     
+
+require_once('modeliDashboard.php');
+
+$dhenat=new dashboard1();
+$dashboard1=$dhenat->lexoDhenat2();
+
 ?>
 <!DOCTYPE html>
 
@@ -25,7 +31,7 @@ if(!isset($_SESSION['email'])){
   <div class="sidebar">
     <div class="logo-details">
       <i class='bx bxl-c-plus-plus'></i>
-      <span class="logo_name">Kosova Network</span>
+      <a href="faza1.php"><span class="logo_name">Kosova Network</span></a>
     </div>
       <ul class="nav-links">
         <li>
@@ -35,15 +41,15 @@ if(!isset($_SESSION['email'])){
           </a>
         </li>
         <li>
-          <a href="faza1.php">
+          <a href="displayHome.php">
             <i class='bx bx-box' ></i>
             <span class="links_name">Home</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="displayCities.php">
             <i class='bx bx-list-ul' ></i>
-            <span class="links_name">News</span>
+            <span class="links_name">Cities</span>
           </a>
         </li>
         <li>
@@ -128,57 +134,55 @@ if(!isset($_SESSION['email'])){
           <div class="sales-details">
           <ul class="details">
             <li class="topic">Date</li>
-            <li><a href="#">01 Feb 2023</a></li>
-            <li><a href="#">02 Feb 2023</a></li>
-            <li><a href="#">03 Feb 2023</a></li>
-            <li><a href="#">05 Feb 2023</a></li>
-            <li><a href="#">07 Feb 2023</a></li>
-            <li><a href="#">09 Feb 2023</a></li>
-            <li><a href="#">10 Feb 2023</a></li>
-            <li><a href="#">16 Feb 2023</a></li>
-             <li><a href="#">21 Feb 2023</a></li>
+            <?php
+            foreach($dashboard1 as $key=> $value){
+
+            ?>
+            <li><a href="#"><?php echo $value['date'] ?></a></li>
+            
+          <?php
+            }
+          ?>
           </ul>
             <ul class="details">
             <li class="topic">User</li>
-            <li><a href="#">Andi Musmurati</a></li>
-            <li><a href="#">Rrita Shaqiri</a></li>
-            <li><a href="#">Sonata Jakupi</a></li>
-            <li><a href="#">Edon Xani</a></li>
-            <li><a href="#">Bleon Murtezaj</a></li>
-            <li><a href="#">Riga Maksuti</a></li>
-            <li><a href="#">Erin Mustafa</a></li>
-            <li><a href="#">Robert Nikolla</a></li>
-             <li><a href="#">Bato Maca</a></li>
+            <?php
+            foreach($dashboard1 as $key=> $value){
+
+            ?>
+            <li><a href="#"><?php echo $value['user'] ?></a></li>
+            <?php
+            }
+          ?>
+          </ul>
+          
+          <ul class="details">
+            <li class="topic">Logs</li>
+            <?php
+            foreach($dashboard1 as $key=> $value){
+
+            ?>
+            <li><a href="#"><?php echo $value['total'] ?></a></li>
+            <?php
+            }
+          ?>
           </ul>
           <ul class="details">
             <li class="topic">Action</li>
-            <li><a href="#">Read</a></li>
-            <li><a href="#">Read</a></li>
-            <li><a href="#">Read</a></li>
-            <li><a href="#">Edited</a></li>
-            <li><a href="#">Edited</a></li>
-            <li><a href="#">Read</a></li>
-            <li><a href="#">Read</a></li>
-             <li><a href="#">Edited</a></li>
-            <li><a href="#">Edited</a></li>
+            <?php
+            foreach($dashboard1 as $key=> $value){
+
+            ?>
+            <li id='de'><a href="deleteDashboard.php?id=<?php echo $value['id']?>"><button id="d">DELETE</button></a></li>
+            <?php
+            }
+          ?>
           </ul>
-          <ul class="details">
-            <li class="topic">Total</li>
-            <li><a href="#">204</a></li>
-            <li><a href="#">255</a></li>
-            <li><a href="#">288</a></li>
-            <li><a href="#">166</a></li>
-            <li><a href="#">556</a></li>
-            <li><a href="#">495</a></li>
-            <li><a href="#">733</a></li>
-             <li><a href="#">253</a></li>
-             <li><a href="#">452</a></li>
-          </ul>
+          
           </div>
          
         </div>
 </section>
-
 
   <script>
    let sidebar = document.querySelector(".sidebar");

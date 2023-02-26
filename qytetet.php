@@ -1,3 +1,9 @@
+<?php 
+require_once('modeliHome.php');
+
+$dhenat=new home();
+$qytetet=$dhenat->lexoDhenatQytetet();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,41 +22,19 @@
     <div class="Kosova">
     <div class="Qytetet">
         
-        <div class="items">
-            <img src="fotot/gjilan.png">
-            <h4>Gjilan</h4><br> 
-            <button><a id="ButtonFont"href="news.php" >Visit</a></button>
-        </div> 
-        <div class="items">
-            <img src="fotot/prishtine.jpg">
-            <h4>Prishtine</h4><br> 
-            <button><a id="ButtonFont" href="news.php">Visit</a></button>
-        </div> 
-        <div class="items">
-            <img src="fotot/ferizaj.jpg">
-            <h4>Ferizaj</h4><br> 
-            <button><a id="ButtonFont" href="news.php">Visit</a></button>
-        </div> 
-        <div class="items">
-            <img src="fotot/peje.jpg">
-            <h4>Peje</h4><br> 
-            <button><a id="ButtonFont" href="news.php">Visit</a></button>
-        </div> 
-        <div class="items">
-            <img src="fotot/prizren.jpg">
-            <h4>Prizren</h4><br> 
-            <button><a id="ButtonFont" href="news.php">Visit</a></button>
-        </div> 
-        <div class="items">
-            <img src="fotot/mitrovice.jpg">
-            <h4>Mitrovice</h4><br> 
-            <button><a id="ButtonFont" href="news.php">Visit</a></button>
-        </div> 
-        <div class="items">
-            <img src="fotot/gjakove.jpg">
-            <h4>Gjakove</h4><br> 
-            <button><a id="ButtonFont" href="news.php">Visit</a></button>
-        </div> 
+
+            <?php
+            foreach($qytetet as $key=> $value){
+
+            ?>
+            <div class="items">
+            <img src="<?php echo $value['foto'] ?>">
+            <h4><?php echo $value['emri'] ?></h4><br> 
+            <button><a id="ButtonFont" href="news.php" >Visit</a></button>
+            </div> 
+            <?php
+            } 
+            ?>
     </div>
 </div>
 <?php include "footer.html" ?>

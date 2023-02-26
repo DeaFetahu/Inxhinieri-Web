@@ -2,7 +2,7 @@
 require_once('modeliAddUser.php');
 if(isset($_POST['save'])){
 
-    $regjistrim=new Useri();
+    $regjistrim=new modeluseri();
 
     $regjistrim->setEmri($_POST['emri']);
     $regjistrim->setMbiemri($_POST['mbiemri']);

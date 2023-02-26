@@ -10,6 +10,14 @@ if(!isset($_SESSION["email"])){
     $hide="hide";
   }
 
+require_once('modeliHome.php');
+
+$dhenat=new home();
+$home=$dhenat->lexoDhenat2();
+$stay=$dhenat->lexoDhenatStay();
+$eat=$dhenat->lexoDhenatEat();
+$do=$dhenat->lexoDhenatDo();
+
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +39,7 @@ if(!isset($_SESSION["email"])){
           <br>
           <br><br>
           <br><br>
-         <p1 style="margin-left:17% ; font-family:'Poppins',sans-serif; color: gray; font-size: 30px;">Kosova is a small state but with astonishing views, places and things in it,</p1><br>
+             <p1 style="margin-left:17% ; font-family:'Poppins',sans-serif; color: gray; font-size: 30px;"> Kosovo is a small state but with astonishing and amazing places in it</p1><br>
              <p2 style="margin-left:21% ; font-family:'Poppins',sans-serif; color: gray; font-size: 30px;">below are just some of the beautiful things our Kosova offers </p2>
            <br>
           <br>
@@ -85,31 +93,23 @@ if(!isset($_SESSION["email"])){
             </div>
           </div>
           <div class="Eat">
-            <div class="responsive">
-              <div class="gallery">
-                <a target="_blank" href="https://www.facebook.com/swissdiamondhotelprishtina">
-                  <img src="fotot/swiss.jpg" alt="Swiss" width="600" height="400">
-                </a>
-                <div class="desc">Swiss Diamond</div>
-              </div>
-            </div>
-            <div class="responsive">
-              <div class="gallery">
-                <a target="_blank" href="https://www.facebook.com/dukagjiniresidence">
-                  <img src="fotot/dukagjini.jpg" alt="dukagjini" width="600" height="400">
-                </a>
-                <div class="desc">Dukagjini Resort</div>
-              </div>
-            </div>
-            
-            <div class="responsive">
-              <div class="gallery">
-                <a target="_blank" href="https://www.facebook.com/hotelastorialuxury">
-                  <img src="fotot/astoria.jpg" alt="astoria" width="600" height="400">
-                </a>
-                <div class="desc">Hotel Astoria</div>
-              </div>
-            </div>
+          <?php
+                      foreach($stay as $key=> $value){
+        
+                      ?>
+                        <div class="responsive">
+                          <div class="gallery">
+                            <a target="_blank" href="<?php echo $value['url'] ?>">
+                              <img src="<?php echo $value['foto'] ?>" alt="<?php echo $value['emri'] ?>" width="600" height="400">
+                            </a>
+                            <div class="desc"><?php echo $value['emri'] ?></div>
+                          </div>
+                        </div>
+                  <?php
+                  } 
+                  ?>
+
+               
             </div>
             <div class="clearfix"></div>
             <br><br><br>
@@ -124,32 +124,24 @@ if(!isset($_SESSION["email"])){
             </div>
           </div>
           <div class="Eat1">
-            <div class="responsive1">
-              <div class="gallery1">
-                <a target="_blank" href="https://www.facebook.com/BonAmiBar">
-                  <img src="fotot/bonami1.jpg" alt="Bonami" width="600" height="400">
-                </a>
-                <div class="desc1">Bon'Ami Bar</div>
-              </div>
-            </div>
-            <div class="responsive1">
-              <div class="gallery1">
-                <a target="_blank" href="https://www.facebook.com/PlanetGjilan">
-                  <img src="fotot/planeti1.jpg" alt="Planeti" width="600" height="400">
-                </a>
-                <div class="desc1">Resort Planet</div>
-              </div>
-            </div>
-            
-            <div class="responsive1">
-              <div class="gallery1">
-                <a target="_blank" href="https://www.facebook.com/eat.mucho">
-                  <img src="fotot/eatmucho.jpg" alt="eatMucho" width="600" height="400">
-                </a>
-                <div class="desc1">Eat Mucho</div>
-              </div>
-            </div>
-            </div>
+
+                  <?php
+                      foreach($eat as $key=> $value){
+        
+                      ?>
+                        <div class="responsive1">
+                          <div class="gallery1">
+                            <a target="_blank" href="<?php echo $value['url'] ?>">
+                              <img src="<?php echo $value['foto'] ?>" alt="<?php echo $value['emri'] ?>" width="600" height="400">
+                            </a>
+                            <div class="desc1"><?php echo $value['emri'] ?></div>
+                          </div>
+                        </div>
+                  <?php
+                  } 
+                  ?>
+           
+            </div> 
             <div class="clearfix1"></div>
             <br><br><br>
 
@@ -163,32 +155,23 @@ if(!isset($_SESSION["email"])){
               </div>
             </div>
             <div class="Eat2">
-              <div class="responsive2">
-                <div class="gallery2">
-                  <a target="_blank" href="https://www.facebook.com/adventureparkpeje">
-                    <img src="fotot/fotoo6.jpg" alt="park" width="600" height="400">
-                  </a>
-                  <div class="desc2">Adventure Park</div>
-                </div>
-              </div>
-              
-              <div class="responsive2">
-                <div class="gallery2">
-                  <a target="_blank" href="https://www.facebook.com/svonon.tourism">
-                    <img src="fotot/svonon.jpg" alt="svonon" width="600" height="400">
-                  </a>
-                  <div class="desc2">Svonon Tours</div>
-                </div>
-              </div>
-              
-              <div class="responsive2">
-                <div class="gallery2">
-                  <a target="_blank" href="https://www.facebook.com/pages/Rugova-Canyon/103281379727754">
-                    <img src="fotot/fotoo8.jpg" alt="Mountains" width="600" height="400">
-                  </a>
-                  <div class="desc2">Rugova Mountains</div>
-                </div>
-              </div>
+
+            <?php
+                      foreach($do as $key=> $value){
+        
+                      ?>
+                        <div class="responsive2">
+                          <div class="gallery2">
+                            <a target="_blank" href="<?php echo $value['url'] ?>">
+                              <img src="<?php echo $value['foto'] ?>" alt="<?php echo $value['emri'] ?>" width="600" height="400">
+                            </a>
+                            <div class="desc2"><?php echo $value['emri'] ?></div>
+                          </div>
+                        </div>
+                  <?php
+                  } 
+                  ?>
+        
               </div>
               <div class="clearfix2"></div>
       <br>

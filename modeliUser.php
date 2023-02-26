@@ -131,7 +131,7 @@ class useri extends dbConnect{
         $sql='UPDATE useri GET emri=?, mbiemri=?, email=?, password=?, roli=? where id=?';
 
         $stm=$this->dbconn->prepare($sql);
-        $stm->execute ([$this->emri, $this->mbiemri,$this->email, $this->password,$this->roli,$this->id]);
+        $stm->execute ([':emri'=>$this->emri, ':mbiemri'=>$this->mbiemri,':email'=>$this->email, ':password'=>$this->password,':roli'=>$this->roli,':id'=>$this->id]);
     }
    
 }
