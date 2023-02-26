@@ -4,123 +4,47 @@
         <title>News</title>
         <link rel="stylesheet" href="css/news.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-.mySlides {
-  display: none;
-}
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-        </style>
     </head>
     <body >
-   <?php include "header.php"?>
+   <?php include "header.html"?>
         <hr>
         <br>
 
         <div class="slideshow-container">
 
+            <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
               <div class="numbertext">1 / 4</div>
-              <img src="fotot/prishtine.jpg" style="width:100%; height:25%">
-              <div class="text">Prishtina</div>
+              <img src="fotot/Malet_e_Rugoves.jpg" style="width:100%">
+              <div class="text"><h1 style="color:white">Rugova radhitet si qendra e katërt kryesore për sporte dimërore nga Federata Ndërkombëtare e Siktarisë (FIS) me qendrën në Lucernë.</h1></div>
             </div>
           
             <div class="mySlides fade">
               <div class="numbertext">2 / 4</div>
-              <img src="fotot/gjilan.png" style="width:100%; height:25%">
-              <div class="text">Gjilan</div>
+              <img src="fotot/Kamenica.jpg" style="width:100%">
+              <div class="text"><h1 style="color:white">Microsoft i bëri komentimë kësaj fotoje pasi qe dukej si home page në Windows XP por kjo fushë  gjindet në Kamenicë.</h1></div>
             </div>
           
             <div class="mySlides fade">
               <div class="numbertext">3 / 4</div>
-              <img src="fotot/ferizaj.jpg" style="width:100%; height:25%">
-              <div class="text">Prishtine</div>
+              <img src="fotot/shpella-gadime.jpg" style="width:100%">
+              <div class="text"><h2 style="color:white">Shpella e Gadimes</h2>
+                <h3 style="color:white">Kristalet te rralla qe gjenden në këtë shpellë nuk gjenden në shumë vende botërore prandaj këto kristale kanë vlerë evropiane,nga madhësia e rritjes së kristalit në një cm për 30,000 vjet kjo rrjedh se shpella është e vjetër 80,000vjet.</h3></div>
             </div>
     
             <div class="mySlides fade">
                 <div class="numbertext">4 / 4</div>
-                <img src="fotot/gjakove.jpg" style="width:100%; height:25%">
-                <div class="text">Gjakova</div>
+                <img src="fotot/KosovaMirusha.jpg" style="width:100%">
+                <div class="text"><h1 style="color:white">Ujëvarat e Mirushës janë pjesë e një parku me rëndësi të veçantë natyrore, shkencore, kulturore dhe turistike.</h1></div>
               </div>
           
+            <!-- Next and previous buttons -->
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
           </div>
           <br>
           
-       
+          <!-- The dots/circles -->
           <div style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
@@ -130,18 +54,34 @@
 
           <br>
           <br>
-          <br><br>
+
+
 
         <fieldset id ="fieldsetQyetet">
         <h3 style="color:Black">Down below you can type the name of a city (part of Kosovo) for whom you want to know more about !</h3>
         <h4 style="color:grey">Please make sure you write the names correctly (ex. Prizreni, Gjakova, Gjilani etc)</h4>
+
+        
         
         <form action="news.php" method="post">
-        <input type="text" name="qyteti" style="height : 30px; width : 250px ;"><br><br>
+        <input type ="text" name="qyteti" style="height : 30px; width : 250px ;"><br><br>
         <input type="submit" style="height: 20px; width:100px">
         </form>
         <br><br>
+
+            
+        
+
+
+
         <div class="divQytetet">
+
+        
+
+                    
+
+
+
         <?php error_reporting(0);
 
         $qyteti=$_POST["qyteti"];
@@ -185,44 +125,23 @@
             default:
             echo "Invalid city name ! Make sure you are spelling it correctly and that it is part of Kosovo.";
         }
-
+            
         ?>
         </div>
         
+        
+        
+        
+        
+        
+
+        
         </fieldset>
-<br>
+
+        
         
         <br>
         <?php include "footer.html"?>
-        <script>
-            let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-        </script>
+        <script src="myscript.js"></script>
     </body>
 </html> 
